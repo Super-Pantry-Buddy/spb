@@ -57,7 +57,12 @@
 /* ------------------------------------- */
 /* ------------     Hero     ----------- */
 /* ------------------------------------- */
-.hero.is-success .tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover {
+
+.hero.is-success {
+    background-color: var(--lgreen);
+}
+
+tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover {
     background-color: rgba(10,10,10,.5);
 }
 .hero-body, .hero-foot, .hero-head {
@@ -69,8 +74,7 @@
     flex-shrink: 0;
     padding: 2.25rem;
 }
-.hero.is-success {
-    background-color: #48c774;}
+
 
 .hero-head{
   padding: 1%;
@@ -154,26 +158,6 @@ padding: 2.25rem;
   }
 }
 
-<<<<<<< HEAD
-img {
-    height: auto;
-    max-width: 100%;
-    margin-top: 2.75em;
-}
-
-/* **************************************** DETAILS **************************************** */
-.logo {
-  border-spacing: 0px;
-  background: #fff;
-  box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
-}
-
-.cell {
-  border: 1px solid #f4f6f8;
-  padding: 4px;
-  text-align: left;
-}
-=======
 /* ------------------------------------- */
 /* -------         Font           ------ */
 /* ------------------------------------- */
@@ -200,4 +184,3 @@ h2{
     color: #478843;
     -webkit-text-stroke-width: medium;
 }
->>>>>>> master
