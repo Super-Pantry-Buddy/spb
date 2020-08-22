@@ -2,7 +2,7 @@ const express = require("express");
 
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -42,6 +42,43 @@ app.post("/api/search", (req, res) => {
         res.json(recipes);
     });
 });
+
+app.post("/newUser", (req, res) => {
+  console.log(req.body);
+  db.Book.create(req.body)
+  .then(stuff => {
+    res.json(stuff);
+  })
+  .catch(err => {
+    res.json(err);
+  });
+})
+
+app.post("/updateUser", (req, res) => {
+  console.log('update', req.body);
+  db.Book.findOneAndUpdate(
+    {name: req.body.name},
+    {
+      ...req.body
+    }
+  )
+  .then(stuff => {
+    res.json(stuff);
+  })
+  .catch(err => {
+    res.json(err);
+  });
+})
+
+app.get("/querydb/:name", (req, res) => {
+  console.log(req.body);
+  db.Book.find(
+    {name: req.params.name}
+  )
+  .then(stuff => {
+    res.json(stuff);
+  });
+})
 
 // Connect to the Mongo DB
 mongoose.connect(
