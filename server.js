@@ -23,7 +23,7 @@ const getRecipes = (params) => {
     );
     return fetch(url_).then((response) => response.json());
 };
-
+ 
 // These search params are set server side as there
 // is no reason for users to set them
 const params = {
@@ -82,7 +82,7 @@ app.get("/querydb/:name", (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-    process.env.MONGODB_URI || localhost:3000
+    process.env.MONGODB_URI || "localhost:3001"
 );
 
 // Start the API server
