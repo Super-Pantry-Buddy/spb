@@ -11,7 +11,7 @@ export default ({ items, onClickHandler }) => {
             {items.map((item) => (
                 <button
                     key={uuid()}
-                    className="button"
+                    className="button buttonPantry"
                     onClick={onClickHandler}
                     style={CSS}>
                     {item}

@@ -80,7 +80,7 @@ export default ({ dispatch }) => {
     return (
         <>
             <br></br>
-            <h1>
+            <h1     >
                 Type the ingredients you have on hand to find recipes that work
                 for you! Use the Save and Details buttons to take a closer look,
                 or save the recipe to your library!
@@ -88,7 +88,7 @@ export default ({ dispatch }) => {
             <br></br>
             <InputForm submitHandler={addToIncludeIngredients} />
             <button
-                className="button is-fullwidth details-button"
+                className="button is-fullwidth moreButton"
                 onClick={getRecipes}>
                 {/* this button needs an event handler */}
                 Get Recipes
